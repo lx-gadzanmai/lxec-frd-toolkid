@@ -5,12 +5,21 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  axios:
+    specifier: ^1.7.2
+    version: 1.7.2
   find-up:
     specifier: ^2.1.0
     version: 2.1.0
+  fs-extra:
+    specifier: ^11.2.0
+    version: 11.2.0
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
+  semver:
+    specifier: ^7.6.2
+    version: 7.6.2
   simple-git:
     specifier: ^3.25.0
     version: 3.25.0
@@ -28,12 +37,18 @@ devDependencies:
   '@types/find-up':
     specifier: ^2.1.1
     version: 2.1.1
+  '@types/fs-extra':
+    specifier: ^11.0.4
+    version: 11.0.4
   '@types/lodash-es':
     specifier: ^4.17.12
     version: 4.17.12
   '@types/node':
     specifier: ^18.15.11
     version: 18.19.34
+  '@types/semver':
+    specifier: ^7.5.8
+    version: 7.5.8
   '@types/vscode':
     specifier: ^1.77.0
     version: 1.90.0
@@ -781,12 +796,25 @@ packages:
     resolution: {integrity: sha512-60LC501bQRN9/3yfVaEEMd7IndaufffL56PBRAejPpUrY304Ps1jfnjNqPw5jmM5R8JHWiKBAe5IHzNcPV41AA==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/@types/find-up/-/find-up-2.1.1.tgz}
     dev: true
 
+  /@types/fs-extra@11.0.4:
+    resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/@types/fs-extra/-/fs-extra-11.0.4.tgz}
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 18.19.34
+    dev: true
+
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/@types/json-schema/-/json-schema-7.0.15.tgz}
     dev: true
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/@types/json5/-/json5-0.0.29.tgz}
+    dev: true
+
+  /@types/jsonfile@6.1.4:
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/@types/jsonfile/-/jsonfile-6.1.4.tgz}
+    dependencies:
+      '@types/node': 18.19.34
     dev: true
 
   /@types/lodash-es@4.17.12:
@@ -1274,7 +1302,6 @@ packages:
 
   /asynckit@0.4.0:
     resolution: {integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/asynckit/-/asynckit-0.4.0.tgz}
-    dev: true
 
   /available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/available-typed-arrays/-/available-typed-arrays-1.0.7.tgz}
@@ -1282,6 +1309,16 @@ packages:
     dependencies:
       possible-typed-array-names: 1.0.0
     dev: true
+
+  /axios@1.7.2:
+    resolution: {integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/axios/-/axios-1.7.2.tgz}
+    dependencies:
+      follow-redirects: 1.15.6
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /azure-devops-node-api@12.5.0:
     resolution: {integrity: sha512-R5eFskGvOm3U/GzeAuxRkUsAl0hrAwGgWn6zAd2KrZmrEhWZVqLew4OOupbQlXUuojUzpGtq62SmdhJ06N88og==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/azure-devops-node-api/-/azure-devops-node-api-12.5.0.tgz}
@@ -1594,7 +1631,6 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
-    dev: true
 
   /commander@6.2.1:
     resolution: {integrity: sha1-B5LraC37wyWZm7K4T93duhEKxzw=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/commander/-/commander-6.2.1.tgz}
@@ -1755,7 +1791,6 @@ packages:
   /delayed-stream@1.0.0:
     resolution: {integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/delayed-stream/-/delayed-stream-1.0.0.tgz}
     engines: {node: '>=0.4.0'}
-    dev: true
 
   /destr@2.0.3:
     resolution: {integrity: sha512-2N3BOUU4gYMpTP24s5rF5iP7BDr7uNTCs4ozw3kf/eKfvWSIu93GEBi5m427YoyJoeOzQ5smuu4nNAPGb8idSQ==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/destr/-/destr-2.0.3.tgz}
@@ -2537,6 +2572,16 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/flatted/-/flatted-3.3.1.tgz}
     dev: true
 
+  /follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/follow-redirects/-/follow-redirects-1.15.6.tgz}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
   /for-each@0.3.3:
     resolution: {integrity: sha1-abRH6IoKXTLD5whPPxcQA0shN24=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/for-each/-/for-each-0.3.3.tgz}
     dependencies:
@@ -2550,13 +2595,21 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: true
 
   /fs-constants@1.0.0:
     resolution: {integrity: sha1-a+Dem+mYzhavivwkSXue6bfM2a0=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/fs-constants/-/fs-constants-1.0.0.tgz}
     requiresBuild: true
     dev: true
     optional: true
+
+  /fs-extra@11.2.0:
+    resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/fs-extra/-/fs-extra-11.2.0.tgz}
+    engines: {node: '>=14.14'}
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.1.0
+      universalify: 2.0.1
+    dev: false
 
   /fs-minipass@2.1.0:
     resolution: {integrity: sha1-f1A2/b8SxjwWkZDL5BmchSJx+fs=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/fs-minipass/-/fs-minipass-2.1.0.tgz}
@@ -2717,6 +2770,10 @@ packages:
     dependencies:
       get-intrinsic: 1.2.4
     dev: true
+
+  /graceful-fs@4.2.11:
+    resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/graceful-fs/-/graceful-fs-4.2.11.tgz}
+    dev: false
 
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/graphemer/-/graphemer-1.4.0.tgz}
@@ -3133,6 +3190,14 @@ packages:
     resolution: {integrity: sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/jsonc-parser/-/jsonc-parser-3.2.1.tgz}
     dev: true
 
+  /jsonfile@6.1.0:
+    resolution: {integrity: sha1-vFWyY0eTxnnsZAMJTrE2mKbsCq4=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/jsonfile/-/jsonfile-6.1.0.tgz}
+    dependencies:
+      universalify: 2.0.1
+    optionalDependencies:
+      graceful-fs: 4.2.11
+    dev: false
+
   /jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-PRp66vJ865SSqOlgqS8hujT5U4AOgMfhrwYIuIhfKaoSCZcirrmASQr8CX7cUg+RMih+hgznrjp99o+W4pJLHQ==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/jsonwebtoken/-/jsonwebtoken-9.0.2.tgz}
     engines: {node: '>=12', npm: '>=6'}
@@ -3362,14 +3427,12 @@ packages:
   /mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/mime-db/-/mime-db-1.52.0.tgz}
     engines: {node: '>= 0.6'}
-    dev: true
 
   /mime-types@2.1.35:
     resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/mime-types/-/mime-types-2.1.35.tgz}
     engines: {node: '>= 0.6'}
     dependencies:
       mime-db: 1.52.0
-    dev: true
 
   /mime@1.6.0:
     resolution: {integrity: sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/mime/-/mime-1.6.0.tgz}
@@ -3893,6 +3956,10 @@ packages:
       sisteransi: 1.0.5
     dev: true
 
+  /proxy-from-env@1.1.0:
+    resolution: {integrity: sha1-4QLxbKNVQkhldV0sno6k8k1Yw+I=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/proxy-from-env/-/proxy-from-env-1.1.0.tgz}
+    dev: false
+
   /pump@3.0.0:
     resolution: {integrity: sha1-tKIRaBW94vTh6mAjVOjHVWUQemQ=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/pump/-/pump-3.0.0.tgz}
     requiresBuild: true
@@ -4111,7 +4178,6 @@ packages:
     resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/semver/-/semver-7.6.2.tgz}
     engines: {node: '>=10'}
     hasBin: true
-    dev: true
 
   /set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/set-function-length/-/set-function-length-1.2.2.tgz}
@@ -4622,6 +4688,11 @@ packages:
     dependencies:
       '@types/unist': 2.0.10
     dev: true
+
+  /universalify@2.0.1:
+    resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/universalify/-/universalify-2.0.1.tgz}
+    engines: {node: '>= 10.0.0'}
+    dev: false
 
   /uri-js@4.4.1:
     resolution: {integrity: sha1-mxpSWVIlhZ5V9mnZKPiMbFfyp34=, tarball: http://registry.npm.frd.fenqile.com/lexin_npm_cache/uri-js/-/uri-js-4.4.1.tgz}

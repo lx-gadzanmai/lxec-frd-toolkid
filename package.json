@@ -2,12 +2,13 @@
   "publisher": "gadzanmai",
   "name": "lxec-frd-toolkid",
   "displayName": "乐信电商前端工具集",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "private": true,
   "packageManager": "pnpm@7.32.2",
-  "description": "",
+  "description": "乐信电商前端工具集",
   "author": "gadzanmai",
   "license": "MIT",
+  "repository": "https://github.com/lx-gadzanmai/lxec-frd-toolkid",
   "categories": [
     "Other"
   ],
@@ -179,14 +180,17 @@
     "vscode:prepublish": "npm run build",
     "publish": "vsce publish --no-dependencies",
     "pack-no-dep": "vsce package --no-dependencies",
-    "pack": "vsce package --baseImagesUrl https://img1.fenqile.com/product6/M00/ex/20220518151124-5a3440fb-7197-4e8a-afdd-061dad810e20.png --allow-missing-repository",
+    "pack": "vsce package",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "release": "bumpp && npm run publish"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "find-up": "^2.1.0",
+    "fs-extra": "^11.2.0",
     "lodash": "^4.17.21",
+    "semver": "^7.6.2",
     "simple-git": "^3.25.0"
   },
   "devDependencies": {
@@ -194,8 +198,10 @@
     "@antfu/ni": "^0.21.2",
     "@rsbuild/core": "^0.7.7",
     "@types/find-up": "^2.1.1",
+    "@types/fs-extra": "^11.0.4",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^18.15.11",
+    "@types/semver": "^7.5.8",
     "@types/vscode": "^1.77.0",
     "@vscode/vsce": "^2.27.0",
     "bumpp": "^9.1.0",

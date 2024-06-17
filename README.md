@@ -1,9 +1,4 @@
-<p align="center">
-  <img src="//img1.fenqile.com/product6/M00/ex/20220518145459-246236be-b284-4288-9d1e-51b667d1c4f6.png" height="160"/>
-</p>
-
 <h1 align="center">乐信电商前端工具集</h1>
-
 
 ## 状态栏按钮
 
