@@ -5,6 +5,8 @@ import child_process from 'node:child_process'
 import fs from 'fs-extra'
 import vscode from 'vscode'
 
+import Package from '../package'
+
 const cacheDir = path.resolve(
   os.homedir(),
   os.platform() === 'darwin'
@@ -40,8 +42,9 @@ export async function download(
 }
 
 async function afterUpdate() {
+  const displayName = Package.get().displayName
   const buttonLabel = await vscode.window.showInformationMessage(
-    '插件[键盘侠]自动更新完毕, 是否重启该窗口',
+    `插件[${displayName}]自动更新完毕, 是否重启该窗口`,
     '是',
     '否',
   )

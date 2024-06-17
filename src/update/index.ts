@@ -6,8 +6,9 @@ import { fetchLastVersion } from './version'
 import { install } from './install'
 
 async function shouldUpdate(data: { version: string; package_url: string }) {
+  const displayName = Package.get().displayName
   const buttonLabel = await vscode.window.showInformationMessage(
-    '插件[乐信电商前端工具集], 是否更新该插件？',
+    `插件[${displayName}], 是否更新该插件？`,
     '是',
     '否',
   )
