@@ -1,0 +1,210 @@
+{
+  "publisher": "gadzanmai",
+  "name": "lxec-frd-toolkid",
+  "displayName": "乐信电商前端工具集",
+  "version": "0.0.3",
+  "private": true,
+  "packageManager": "pnpm@7.32.2",
+  "description": "",
+  "author": "gadzanmai",
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/index.js",
+  "icon": "res/icon.png",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Open in Lexin Gitlab - Configuration",
+      "properties": {
+        "lxEcFrdToolKid.gitlab.domain": {
+          "type": "string",
+          "description": "自定义 gitlab 域名",
+          "default": "gitlab.fenqile.com"
+        },
+        "lxEcFrdToolKid.remote.name": {
+          "type": "string",
+          "description": "远程仓库的名称",
+          "default": "origin"
+        },
+        "lxEcFrdToolKid.gitlab.protocol": {
+          "type": "string",
+          "description": "自定义URL协议",
+          "default": "http"
+        },
+        "lxEcFrdToolKid.remote.branch": {
+          "type": "string",
+          "description": "远程分支的名称",
+          "default": "master"
+        },
+        "lxEcFrdToolKid.useLocalBranch": {
+          "type": "boolean",
+          "description": "使用本地分支而不是固定的远程分支",
+          "default": true
+        },
+        "lxEcFrdToolKid.useLocalRange": {
+          "type": "boolean",
+          "description": "如果有选择范围，则突出显示本地选择范围",
+          "default": true
+        },
+        "lxEcFrdToolKid.useLocalLine": {
+          "type": "boolean",
+          "description": "如果没有选择范围，则突出显示本地行",
+          "default": false
+        },
+        "lxEcFrdToolKid.button.defaultCommand": {
+          "type": "string",
+          "description": "自定义状态栏按钮的命令",
+          "default": "openProject"
+        },
+        "lxEcFrdToolKid.log.projectName": {
+          "type": "string",
+          "default": "MyProject",
+          "description": "项目名"
+        },
+        "lxEcFrdToolKid.log.showLine": {
+          "type": "boolean",
+          "default": true,
+          "description": "展示行数"
+        },
+        "lxEcFrdToolKid.log.deleteAll": {
+          "type": "boolean",
+          "default": false,
+          "description": "删除所有日志或删除包含 [color] 和 [background] 的日志"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "lxEcFrdToolKid.openProject",
+        "title": "在 Gitlab 里打开该项目"
+      },
+      {
+        "command": "lxEcFrdToolKid.openFile",
+        "title": "在 Gitlab 里打开该文件"
+      },
+      {
+        "command": "lxEcFrdToolKid.openFileHistory",
+        "title": "在 Gitlab 里打开该项目的 File History"
+      },
+      {
+        "command": "lxEcFrdToolKid.openFileBlame",
+        "title": "在 Gitlab 里打开该项目的 File Blame"
+      },
+      {
+        "command": "lxEcFrdToolKid.openFilePermalink",
+        "title": "复制该文件的 Gitlab 链接"
+      },
+      {
+        "command": "lxEcFrdToolKid.openIssues",
+        "title": "在 Gitlab 里打开该项目的 Issues"
+      },
+      {
+        "command": "lxEcFrdToolKid.openMergeRequests",
+        "title": "在 Gitlab 里打开该项目的 MR 请求"
+      },
+      {
+        "command": "lxEcFrdToolKid.openReleases",
+        "title": "在 Gitlab 里打开该项目的 Releases"
+      },
+      {
+        "command": "lxEcFrdToolKid.openBranches",
+        "title": "在 Gitlab 里打开该项目的分支"
+      },
+      {
+        "command": "lxEcFrdToolKid.openCommits",
+        "title": "在 Gitlab 里打开该项目当前分支的 Commits"
+      },
+      {
+        "command": "lxEcFrdToolKid.openNetwork",
+        "title": "在 Gitlab 里打开该项目当前分支的 network"
+      },
+      {
+        "command": "lxEcFrdToolKid.openActivity",
+        "title": "在 Gitlab 里打开该项目的 activity"
+      },
+      {
+        "command": "lxEcFrdToolKid.openTags",
+        "title": "在 Gitlab 里打开该项目当前分支的标签 Tags"
+      },
+      {
+        "command": "lxEcFrdToolKid.openWiki",
+        "title": "在 Gitlab 里打开该项目的 Wiki"
+      },
+      {
+        "command": "lxEcFrdToolKid.openRepository",
+        "title": "在 Gitlab 里打开该项目当前分支的仓库"
+      },
+      {
+        "command": "lxEcFrdToolKid.copyFilePermalink",
+        "title": "复制该项目的 Gitlab 链接"
+      },
+      {
+        "command": "lxEcFrdToolKid.insertLog",
+        "title": "添加 console log"
+      },
+      {
+        "command": "lxEcFrdToolKid.deleteLogs",
+        "title": "删除所有日志或删除包含 [color] 和 [background] 的 console.log"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "lxEcFrdToolKid.insertLog",
+        "key": "shift+ctrl+l",
+        "mac": "shift+cmd+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "lxEcFrdToolKid.deleteLogs",
+        "key": "shift+ctrl+d",
+        "mac": "shift+cmd+d"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild dev",
+    "lint": "eslint .",
+    "vscode:prepublish": "npm run build",
+    "publish": "vsce publish --no-dependencies",
+    "pack-no-dep": "vsce package --no-dependencies",
+    "pack": "vsce package --baseImagesUrl https://img1.fenqile.com/product6/M00/ex/20220518151124-5a3440fb-7197-4e8a-afdd-061dad810e20.png --allow-missing-repository",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && npm run publish"
+  },
+  "dependencies": {
+    "find-up": "^2.1.0",
+    "lodash": "^4.17.21",
+    "simple-git": "^3.25.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.4",
+    "@antfu/ni": "^0.21.2",
+    "@rsbuild/core": "^0.7.7",
+    "@types/find-up": "^2.1.1",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^18.15.11",
+    "@types/vscode": "^1.77.0",
+    "@vscode/vsce": "^2.27.0",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.37.0",
+    "esno": "^0.16.3",
+    "pnpm": "^7.32.2",
+    "rimraf": "^4.4.1",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8"
+  }
+}
