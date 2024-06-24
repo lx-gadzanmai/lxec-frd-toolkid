@@ -90,6 +90,28 @@ const Utils = {
         return wrapperPath
       }
     },
+    async getPath(file: string | string[]) {
+      const { activeTextEditor } = vscode.window
+      const editorPath
+        = activeTextEditor && activeTextEditor.document.uri.fsPath
+      const rootPath = Utils.folder.getRootPath(editorPath)
+
+      if (!rootPath)
+        return false
+
+      const fileNames = toArray(file)
+
+      for (const fileName of fileNames) {
+        const foundPath = await Utils.folder.getWrapperPathOf(
+          rootPath,
+          editorPath || rootPath,
+          fileName,
+        )
+
+        if (foundPath)
+          return foundPath
+      }
+    },
   },
 
   repo: {
@@ -99,22 +121,6 @@ const Utils = {
 
     async getHash(git: SimpleGit) {
       return (await git.revparse(['HEAD'])).trim()
-    },
-
-    async getPath() {
-      const { activeTextEditor } = vscode.window
-      const editorPath
-        = activeTextEditor && activeTextEditor.document.uri.fsPath
-      const rootPath = Utils.folder.getRootPath(editorPath)
-
-      if (!rootPath)
-        return false
-
-      return await Utils.folder.getWrapperPathOf(
-        rootPath,
-        editorPath || rootPath,
-        '.git',
-      )
     },
 
     async getBranch(git: SimpleGit) {

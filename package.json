@@ -2,7 +2,7 @@
   "publisher": "gadzanmai",
   "name": "lxec-frd-toolkid",
   "displayName": "乐信电商前端工具集",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "packageManager": "pnpm@7.32.2",
   "description": "乐信电商前端工具集",
@@ -207,6 +207,11 @@
         "command": "lxEcFrdToolKid.snippetsRefresh",
         "category": "Snippets",
         "title": "更新 snippets"
+      },
+      {
+        "command": "lxEcFrdToolKid.aresDevCommand",
+        "category": "ares",
+        "title": "运行 area dev 此页面"
       }
     ],
     "keybindings": [
@@ -220,6 +225,11 @@
         "command": "lxEcFrdToolKid.deleteLogs",
         "key": "shift+ctrl+d",
         "mac": "shift+cmd+d"
+      },
+      {
+        "command": "lxEcFrdToolKid.aresDevCommand",
+        "key": "shift+ctrl+a",
+        "mac": "shift+cmd+a"
       }
     ]
   },

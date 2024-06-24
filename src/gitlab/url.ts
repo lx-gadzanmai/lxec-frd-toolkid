@@ -6,7 +6,7 @@ import Config from '../config'
 import Utils from '../utils'
 
 async function getGit() {
-  const repopath = await Utils.repo.getPath()
+  const repopath = await Utils.folder.getPath('.git')
 
   if (!repopath) {
     vscode.window.showErrorMessage(

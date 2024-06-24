@@ -1,7 +1,8 @@
 /* IMPORT */
 
 import URL from './gitlab/url'
-import Editor from './editor/index'
+import Editor from './editor'
+import Dev from './dev'
 import { handleRefreshSnippetCommand } from './snippet'
 
 /* COMMANDS */
@@ -82,6 +83,10 @@ function snippetsRefresh() {
   return handleRefreshSnippetCommand()
 }
 
+function aresDevCommand() {
+  return Dev.process()
+}
+
 /* EXPORT */
 
 export default {
@@ -104,4 +109,5 @@ export default {
   insertLog,
   deleteLogs,
   snippetsRefresh,
+  aresDevCommand,
 }

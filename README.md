@@ -22,6 +22,22 @@
 
 按下快捷键 `shift + ctrl + d` 可在目标编辑器中快速删除带颜色背景的特殊 console.log
 
+## snippet 代码片段
+
+支持自定义 snippet 代码片段
+
+通过设置插件配置 `lxEcFrdToolKid.snippet.remoteConfigs` 可使用星河静态配置自定义设置 snippet 代码片段；
+
+参考：
+
+[EVE202406242643839](https://galaxy.oa.fenqile.com/material/index.html#/json/EVE202406242643839?userType=1)
+
+[EVE202406242659030](https://galaxy.oa.fenqile.com/material/index.html#/json/EVE202406242659030?userType=1)
+
+## 快速启动项目开发服务
+
+在打开的页面中按下快捷键 `shift + ctrl + a` 可快速使用 ares 启动开发服务
+
 ## License
 
 [MIT](./LICENSE) License © 2024 [Gadzan](https://github.com/gadzan)
