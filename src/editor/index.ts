@@ -1,5 +1,5 @@
 import vscode from 'vscode'
-import Config from './config'
+import Config from '../config'
 
 function insertText(val: string, cursorMove: boolean, textLen: number) {
   const { activeTextEditor } = vscode.window

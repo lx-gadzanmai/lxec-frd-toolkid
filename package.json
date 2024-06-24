@@ -2,7 +2,7 @@
   "publisher": "gadzanmai",
   "name": "lxec-frd-toolkid",
   "displayName": "乐信电商前端工具集",
-  "version": "0.0.8",
+  "version": "0.2.0",
   "private": true,
   "packageManager": "pnpm@7.32.2",
   "description": "乐信电商前端工具集",
@@ -26,7 +26,7 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Open in Lexin Gitlab - Configuration",
+      "title": "Lexin Front-End Toolkid - Configuration",
       "properties": {
         "lxEcFrdToolKid.gitlab.domain": {
           "type": "string",
@@ -82,81 +82,131 @@
           "type": "boolean",
           "default": false,
           "description": "删除所有日志或删除包含 [color] 和 [background] 的日志"
+        },
+        "lxEcFrdToolKid.snippet.remoteConfigs": {
+          "type": "array",
+          "default": [
+            {
+              "id": "EVE202406242659030",
+              "language": "vue"
+            },
+            {
+              "id": "EVE202406242643839",
+              "language": "javascript,typescript,vue"
+            }
+          ],
+          "description": "远程 snippet 的 ID（配置 event ID）",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Event ID"
+              },
+              "language": {
+                "type": "string",
+                "description": "指定应用 snippet 的语言。"
+              }
+            }
+          }
         }
       }
     },
     "commands": [
       {
         "command": "lxEcFrdToolKid.openProject",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目"
       },
       {
         "command": "lxEcFrdToolKid.openFile",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该文件"
       },
       {
         "command": "lxEcFrdToolKid.openFileHistory",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的 File History"
       },
       {
         "command": "lxEcFrdToolKid.openFileBlame",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的 File Blame"
       },
       {
         "command": "lxEcFrdToolKid.openFilePermalink",
+        "category": "Gitlab",
         "title": "复制该文件的 Gitlab 链接"
       },
       {
         "command": "lxEcFrdToolKid.openIssues",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的 Issues"
       },
       {
         "command": "lxEcFrdToolKid.openMergeRequests",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的 MR 请求"
       },
       {
         "command": "lxEcFrdToolKid.openReleases",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的 Releases"
       },
       {
         "command": "lxEcFrdToolKid.openBranches",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的分支"
       },
       {
         "command": "lxEcFrdToolKid.openCommits",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目当前分支的 Commits"
       },
       {
         "command": "lxEcFrdToolKid.openNetwork",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目当前分支的 network"
       },
       {
         "command": "lxEcFrdToolKid.openActivity",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的 activity"
       },
       {
         "command": "lxEcFrdToolKid.openTags",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目当前分支的标签 Tags"
       },
       {
         "command": "lxEcFrdToolKid.openWiki",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目的 Wiki"
       },
       {
         "command": "lxEcFrdToolKid.openRepository",
+        "category": "Gitlab",
         "title": "在 Gitlab 里打开该项目当前分支的仓库"
       },
       {
         "command": "lxEcFrdToolKid.copyFilePermalink",
+        "category": "Gitlab",
         "title": "复制该项目的 Gitlab 链接"
       },
       {
         "command": "lxEcFrdToolKid.insertLog",
+        "category": "Console Log",
         "title": "添加 console log"
       },
       {
         "command": "lxEcFrdToolKid.deleteLogs",
+        "category": "Console Log",
         "title": "删除所有日志或删除包含 [color] 和 [background] 的 console.log"
+      },
+      {
+        "command": "lxEcFrdToolKid.snippetsRefresh",
+        "category": "Snippets",
+        "title": "更新 snippets"
       }
     ],
     "keybindings": [
@@ -186,6 +236,7 @@
     "release": "bumpp && npm run publish"
   },
   "dependencies": {
+    "ajv": "^8.16.0",
     "axios": "^1.7.2",
     "find-up": "^2.1.0",
     "fs-extra": "^11.2.0",
@@ -210,7 +261,7 @@
     "pnpm": "^7.32.2",
     "rimraf": "^4.4.1",
     "typescript": "^5.0.3",
-    "vite": "^4.2.1",
-    "vitest": "^0.29.8"
+    "vite": "^5.3.1",
+    "vitest": "^1.6.0"
   }
 }

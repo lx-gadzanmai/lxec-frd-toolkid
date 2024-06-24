@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { to } from './tools'
+import { to } from '../tools'
 
 export async function fetchLastVersion() {
   const eventId = 'EVE202406172659029'

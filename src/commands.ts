@@ -1,7 +1,8 @@
 /* IMPORT */
 
-import URL from './url'
-import Editor from './editor'
+import URL from './gitlab/url'
+import Editor from './editor/index'
+import { handleRefreshSnippetCommand } from './snippet'
 
 /* COMMANDS */
 
@@ -77,6 +78,10 @@ function deleteLogs() {
   return Editor.deleteLogs()
 }
 
+function snippetsRefresh() {
+  return handleRefreshSnippetCommand()
+}
+
 /* EXPORT */
 
 export default {
@@ -98,4 +103,5 @@ export default {
   copyFilePermalink,
   insertLog,
   deleteLogs,
+  snippetsRefresh,
 }

@@ -9,6 +9,37 @@ import vscode from 'vscode'
 import Commands from './commands'
 import Config from './config'
 
+const CLS_CHECK_STR = 'class '
+
+/**
+ * 检查目标是否为类。
+ *
+ * @param target
+ * @returns
+ */
+export function isCls<T extends new (...args: any[]) => any>(target: unknown): target is T {
+  return String(target).slice(0, CLS_CHECK_STR.length) === CLS_CHECK_STR
+}
+
+/**
+ * 当目标是一个函数但不是一个类时返回true。
+ */
+export function isFn<T extends (...args: any[]) => any>(target: unknown): target is T {
+  return typeof target === 'function' && !isCls(target)
+}
+
+/**
+ * 转换成数组。
+ *
+ * @param arr
+ * @returns
+ */
+export function toArray<T>(arr: T | T[]): T[] {
+  if (arr == null)
+    return []
+  return Array.isArray(arr) ? arr : [arr]
+}
+
 /* UTILS */
 
 const Utils = {

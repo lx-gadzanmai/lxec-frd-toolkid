@@ -44,7 +44,7 @@ export async function download(
 async function afterUpdate() {
   const displayName = Package.get().displayName
   const buttonLabel = await vscode.window.showInformationMessage(
-    `插件[${displayName}]自动更新完毕, 是否重启该窗口`,
+    `插件[${displayName}]更新完毕, 是否重启该窗口`,
     '是',
     '否',
   )
@@ -72,7 +72,7 @@ async function processInstall(fileAddress: string): Promise<boolean> {
           afterUpdate()
         }
         else {
-          vscode.window.showErrorMessage(`插件自动更新失败: ${error}`)
+          vscode.window.showErrorMessage(`插件更新失败: ${error}`)
           resolve(false)
         }
       },

@@ -2,8 +2,8 @@
 
 import { compact } from 'lodash'
 import vscode from 'vscode'
-import Config from './config'
-import Utils from './utils'
+import Config from '../config'
+import Utils from '../utils'
 
 async function getGit() {
   const repopath = await Utils.repo.getPath()
