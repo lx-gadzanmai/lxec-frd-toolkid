@@ -7,6 +7,8 @@ import Config from './config'
 
 import { checkAndUpdate } from './update'
 
+import { activeSparkIntellisense } from './spark'
+
 export async function activate(ctx: ExtensionContext) {
   Utils.initCommands(ctx)
   const config = Config.get()
@@ -16,6 +18,7 @@ export async function activate(ctx: ExtensionContext) {
   statusBar.tooltip = '在 Gitlab 里打开该项目'
   statusBar.show()
   activeSnippet(ctx)
+  activeSparkIntellisense(ctx)
   // 检查更新
   checkAndUpdate()
 }

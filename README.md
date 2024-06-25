@@ -40,6 +40,14 @@
 
 在打开的页面中按下快捷键 `shift + ctrl + a` 可快速使用 ares 启动开发服务
 
+## Spark 组件 Path intellisense 支持
+
+![](https://coss-ec.fenqile.com/ecproduct201/M00/ex/20240625142204-c5aa5adb-8d29-463e-afa4-02933900956b.gif)
+
 ## License
 
 [MIT](./LICENSE) License © 2024 [lx-gadzanmai](https://github.com/lx-gadzanmai)
+
+Inspired by:
+1. antfu.open-in-github-button
+2. vscode-remote-snippets
