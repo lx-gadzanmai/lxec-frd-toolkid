@@ -2,7 +2,7 @@
   "publisher": "gadzanmai",
   "name": "lxec-frd-toolkid",
   "displayName": "乐信电商前端工具集",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "packageManager": "pnpm@7.32.2",
   "description": "乐信电商前端工具集",
@@ -136,7 +136,7 @@
       {
         "command": "lxEcFrdToolKid.openFilePermalink",
         "category": "Gitlab",
-        "title": "复制该文件的 Gitlab 链接"
+        "title": "打开该文件的 Gitlab 链接"
       },
       {
         "command": "lxEcFrdToolKid.openIssues",
@@ -206,7 +206,7 @@
       {
         "command": "lxEcFrdToolKid.snippetsRefresh",
         "category": "Snippets",
-        "title": "更新 snippets"
+        "title": "立刻更新 snippets"
       },
       {
         "command": "lxEcFrdToolKid.aresDevCommand",

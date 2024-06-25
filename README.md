@@ -1,8 +1,10 @@
 <h1 align="center">乐信电商前端工具集</h1>
 
+[详细文档](https://ledocs.oa.fenqile.com/doc/6919751a4d10a99ca750e134d04ee936)
+
 ## 状态栏按钮
 
-在乐信gitlab里打开项目.
+在乐信 gitlab 里打开项目.
 
 ![](https://coss-ec.fenqile.com/ecproduct201/M00/ex/20240614192159-c44b4641-7dca-4b32-912a-2333340cd73c.jpg)
 
@@ -40,4 +42,4 @@
 
 ## License
 
-[MIT](./LICENSE) License © 2024 [Gadzan](https://github.com/gadzan)
+[MIT](./LICENSE) License © 2024 [lx-gadzanmai](https://github.com/lx-gadzanmai)
